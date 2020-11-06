@@ -1,0 +1,58 @@
+header
+{
+    display: flex;
+    align-items: flex-end;
+}
+#titre
+{
+    display: flex;
+    flex-direction: column;
+}
+
+#logo
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+h1
+{
+    font-size: 1em;
+    font-weight: bold;
+}
+h2
+{
+    font-size: 0.8em;
+}
+@font-face {
+    font-family: 'Raleway' sans-serif;
+    src: url('Raleway.woff');
+}
+body /*Utilisation de la police qu'on vient de définir sur les titres */
+{
+    font-family: 'Raleway', Serif;
+}
+
+nav ul
+{
+    display: flex;
+    list-style-type: none;
+    font-size: 0.8em;
+}
+
+nav li
+{
+    margin-right: 15px;
+}
+
+nav a 
+{
+    color: #0065FC;
+    text-decoration: none;
+}
+
+nav a:hover
+{
+    color: #deebff
+}

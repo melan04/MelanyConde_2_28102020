@@ -1,19 +1,19 @@
-header
+/* Définition des polices personnalisées */
+
+@font-face 
 {
-    display: flex;
-    align-items: flex-end;
-}
-#titre
-{
-    display: flex;
-    flex-direction: column;
+    font-family: 'Raleway';
+    src: url('polices/Raleway/Raleway-VariableFont_wght.ttf');
+    font-weight: normal;
 }
 
-#logo
+/* Eléments principaux de la page */
+
+body /* Utilisation de la police qu'on vient de définir sur les titres */
 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    font-family: 'Raleway', Serif;
+    font-weight: normal;
+    color: black;
 }
 
 h1
@@ -21,38 +21,119 @@ h1
     font-size: 1em;
     font-weight: bold;
 }
+
 h2
 {
     font-size: 0.8em;
+    font-weight: normal;
 }
-@font-face {
-    font-family: 'Raleway' sans-serif;
-    src: url('Raleway.woff');
-}
-body /*Utilisation de la police qu'on vient de définir sur les titres */
+
+/* Header */
+
+header
 {
-    font-family: 'Raleway', Serif;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
 }
+
+.titre 
+{
+    display: flex;
+    align-items: flex-start;
+}
+
+.logo
+{
+    display: flex;
+    align-items: flex-start;
+    float: left;
+}
+.inscription a
+{
+  display: flex;
+  color: #0065FC;
+  text-decoration: none;
+  font-size: 0.8em;
+  margin : 20px 200px 0 0 
+}
+
+
+/* Navigation */
 
 nav ul
 {
     display: flex;
-    list-style-type: none;
-    font-size: 0.8em;
+    justify-content: space-around;
+    list-style-type: none;  
 }
 
 nav li
 {
-    margin-right: 15px;
+    margin-left: 30px;
+    text-decoration: none; 
 }
 
 nav a 
 {
-    color: #0065FC;
+    font-size: 0.8em;
     text-decoration: none;
+    color: black;
 }
 
-nav a:hover
+nav a:focus
 {
-    color: #deebff
+    color: #0065FC;
+    border-top: #0065FC solid 1px;
+    padding : 20px;
+}
+
+.hebergements
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-radius: 10px;
+}
+
+.hebergements article
+{
+    background-color: #F2F2F2;
+    width: 70%;
+    border-radius: 10px;
+    padding: 5px
+}
+
+.hebergements aside
+{
+    background-color: #F2F2F2;
+    width: 20%;
+    border-radius: 10px;
+    padding: 5px;
+}
+footer
+{
+    display: flex;
+    flex-direction: row;
+    margin: right;
+    justify-content: space-around;
+    background-color: #f2f2f2;
+    width: auto;
+}
+
+footer h1
+{
+    font-size: 0.8em;
+    font-weight: bold;
+}
+footer ul a
+{
+    text-decoration: none; 
+    color: black;
+    font-size: 0.8em;
+}
+
+footer ul
+{
+   list-style-type: none;  
 }

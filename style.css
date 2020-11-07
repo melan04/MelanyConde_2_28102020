@@ -33,44 +33,45 @@ h2
 header
 {
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
 }
 
 .titre 
 {
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
 }
 
-.logo
-{
-    display: flex;
-    align-items: flex-start;
-    float: left;
-}
+
 .inscription a
 {
   display: flex;
   color: #0065FC;
   text-decoration: none;
-  font-size: 0.8em;
-  margin : 20px 200px 0 0 
+  font-size: 0.8em; 
 }
 
 
 /* Navigation */
 
+nav 
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 nav ul
 {
     display: flex;
-    justify-content: space-around;
     list-style-type: none;  
 }
 
 nav li
 {
-    margin-left: 30px;
+    
     text-decoration: none; 
 }
 
@@ -87,6 +88,8 @@ nav a:focus
     border-top: #0065FC solid 1px;
     padding : 20px;
 }
+
+/* SECTION 1 */
 
 .hebergements
 {
@@ -115,25 +118,31 @@ footer
 {
     display: flex;
     flex-direction: row;
-    margin: right;
     justify-content: space-around;
+    align-content: space-around;
     background-color: #f2f2f2;
-    width: auto;
 }
 
 footer h1
 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: space-around;
     font-size: 0.8em;
-    font-weight: bold;
+    font-weight: bolder;
 }
 footer ul a
 {
     text-decoration: none; 
     color: black;
-    font-size: 0.8em;
+    font-size: 0.8em; 
 }
 
 footer ul
 {
-   list-style-type: none;  
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }

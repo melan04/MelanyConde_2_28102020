@@ -1,81 +1,154 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/d709f141ec.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Reservia</title>
-</head>
+  </head>
 
-<body>
-    <header>
-
+  <body>
+    <!--Header-->
+    <header id="header">
+      <div id="entete">
         <div class="logo">
-            <img src="/images/logo/Reservia.svg" alt="logo" />
-        </div>
-
-        <div class="titre">
-            <h1> Trouvez votre hébergement pour des vacances de rêve </h1>
-            <h2> En plein centre ville ou en pleine nature </h2>
+          <a href="#"><img src="/images/logo/Reservia.svg" alt="logo" /></a>
         </div>
 
         <nav>
-            <ul>
-                <li><a href="#"> Hébergements</a></li>
-                <li><a href="#"> Activités</a></li>
-            </ul> 
-       
-        
-        <div class="inscription">
-            <a href="#"> S'inscrire</a>
+          <ul class="menu">
+            <li><a href="#"> Hébergements</a></li>
+            <li><a href="#"> Activités</a></li>
+            <div class="inscription">
+              <li><a href="#"> S'inscrire</a></li>
+            </div>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="titre">
+        <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+        <p>En plein centre ville ou en pleine nature</p>
+      </div>
+
+      <!--champs de recherche-->
+      <div id="search">
+        <span class="searchicon arrondis grey">
+          <i class="fas fa-map-marker-alt"></i>
+        </span>
+
+        <input
+          class="searchinput arrondis"
+          type="search"
+          placeholder="Marseille, France"
+        />
+
+        <button class="searchsubmitinput arrondis">
+          <span class="searchsubmitinputText">Rechercher</span>
+        </button>
+      </div>
+
+      <!--filtres-->
+      <div id="searchfiltergroup">
+        <h2 class="searchtitle">Filtres</h2>
+
+        <div class="searchfilter arrondis">
+          <div class="searchfiltericon">
+            <i class="fas fa-money-bill-wave"></i>
+          </div>
+          <span class="searchfiltertitle">Économique</span>
         </div>
-       
-    </nav>
 
+        <div class="searchfilter arrondis">
+          <div class="searchfiltericon">
+            <i class="fas fa-child"></i>
+          </div>
+          <span class="searchfiltertitle">Familial</span>
+        </div>
 
+        <div class="searchfilter arrondis">
+          <div class="searchfiltericon">
+            <i class="fas fa-heart"></i>
+          </div>
+          <span class="searchfiltertitle">Romantique</span>
+        </div>
+
+        <div class="searchfilter arrondis">
+          <div class="searchfiltericon">
+            <i class="fas fa-dog"></i>
+          </div>
+          <span class="searchfiltertitle">Animaux autorisés</span>
+        </div>
+      </div>
+
+      <div class="infologement">
+        <div class="infoicone">
+          <i class="fas fa-info"></i>
+        </div>
+        <p class="infotitle">
+          Plus de 500 logements sont disponibles dans cette ville
+        </p>
+      </div>
     </header>
 
-    <section class="hebergements">
-        <article>
-            <h1>Hébergement à Marseille</h1>
-        </article>
+    <!--SECTION 1 : hébergements -->
+    <div class="bloc_hebergement">
+      <div class="hebergements grey arrondis">
+        <h1>Hébergements à Marseille</h1>
 
-        <aside>
-            <h1>Les plus populaires</h1>
-        </aside>
-    </section>
+        <div class="vignettehebergement arrondis">
+          <image
+            src="images/hebergements/4_small/canebiere.jpg"
+            alt="photo hebergement canebiere"
+          />
+        </div>
+      </div>
 
-    <section class="activites">
-        <h1>Activités à Marseille</h1>
-    </section>
+      <!--SECTION 2 : hébergement populaire-->
 
-    <footer>
-        <!--le pied de page -->
+      <div class="populaire grey arrondis">
+        <h1>Les plus populaires</h1>
+        <i class="fas fa-chart-line"></i>
+      </div>
+    </div>
+
+    <!-- SECTION 3 : les activités -->
+    <div class="activites">
+      <h1>Activités à Marseille</h1>
+    </div>
+
+    <!--le pied de page -->
+
+    <footer class="footer">
+      <div class="text">
         <div class="apropos">
-            <h1>A propos</h1>
-            <ul>
-                <li><a href="#">Fonctionnement du site</a></li>
-                <li><a href="#">Conditions générales de vente</a></li>
-                <li><a href="#">Données et confidentialité</a></li>
-            </ul>
+          <h2>A propos</h2>
+          <ul>
+            <li><a href="#">Fonctionnement du site</a></li>
+            <li><a href="#">Conditions générales de vente</a></li>
+            <li><a href="#">Données et confidentialité</a></li>
+          </ul>
         </div>
 
         <div class="noshebergements">
-            <h1>Nos Hébergements</h1>
-                <ul>
-                    <li><a href="#">Charte qualité</a></li>
-                    <li><a href="#">Soumettre votre hôtel</a></li>
-                </ul>
+          <h2>Nos hébergements</h2>
+          <ul>
+            <li><a href="#">Charte qualité</a></li>
+            <li><a href="#">Soumettre votre hôtel</a></li>
+          </ul>
         </div>
 
         <div class="assistance">
-            <h1>Assistance</h1>
-                <ul>
-                    <li><a href="#">Centre d'aide</a></li>
-                    <li><a href="#">Nous contacter</a></li>
-                </ul>  
+          <h2>Assistance</h2>
+          <ul>
+            <li><a href="#">Centre d'aide</a></li>
+            <li><a href="#">Nous contacter</a></li>
+          </ul>
         </div>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>

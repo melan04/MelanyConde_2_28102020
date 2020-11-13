@@ -1,148 +1,233 @@
 /* Définition des polices personnalisées */
 
-@font-face 
-{
-    font-family: 'Raleway';
-    src: url('polices/Raleway/Raleway-VariableFont_wght.ttf');
-    font-weight: normal;
+body /* Eléments principaux de la page */ {
+  font-family: "Raleway", Serif;
+  color: black;
+  margin: 50px;
+  margin-top: 30px;
 }
 
-/* Eléments principaux de la page */
-
-body /* Utilisation de la police qu'on vient de définir sur les titres */
-{
-    font-family: 'Raleway', Serif;
-    font-weight: normal;
-    color: black;
+h1 {
+  font-size: 1.2em;
+  font-weight: bold;
 }
 
-h1
-{
-    font-size: 1em;
-    font-weight: bold;
+h2 {
+  font-size: 1em;
+  font-weight: bold;
 }
 
-h2
-{
-    font-size: 0.8em;
-    font-weight: normal;
+p {
+  font-size: 0.8em;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.grey {
+  background-color: #f2f2f2;
+}
+
+.arrondis {
+  border-radius: 20px;
+  border-color: 1px solid #f2f2f2;
 }
 
 /* Header */
 
-header
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: auto;
-}
-
-.titre 
-{
-    display: flex;
-    flex-direction: column;
-}
-
-
-.inscription a
-{
+#entete {
   display: flex;
-  color: #0065FC;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
   text-decoration: none;
-  font-size: 0.8em; 
+  list-style-type: none;
 }
 
-
-/* Navigation */
-
-nav 
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.menu li a {
+  padding: 30px;
 }
 
-nav ul
-{
-    display: flex;
-    list-style-type: none;  
+.menu li a:focus {
+  border-top: 1px solid #0065fc;
+  padding-top: 40px;
+  color: #0065fc;
 }
 
-nav li
-{
-    
-    text-decoration: none; 
+.inscription li a {
+  color: #0065fc;
+  font-weight: bold;
 }
 
-nav a 
-{
-    font-size: 0.8em;
-    text-decoration: none;
-    color: black;
+.titre {
+  margin-top: 20px;
 }
 
-nav a:focus
-{
-    color: #0065FC;
-    border-top: #0065FC solid 1px;
-    padding : 20px;
+/*recherche*/
+
+#search {
+  display: flex;
+  height: 40px;
+  margin-bottom: 20px;
 }
 
-/* SECTION 1 */
-
-.hebergements
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    border-radius: 10px;
+.searchicon {
+  border-radius: 16px 0px 0px 16px;
+  border: px solid #f2f2f2;
+  margin: auto;
+  padding: 15px;
+  margin-right: 0px;
+  margin-left: 0px;
 }
 
-.hebergements article
-{
-    background-color: #F2F2F2;
-    width: 70%;
-    border-radius: 10px;
-    padding: 5px
+.searchinput {
+  border: none;
+  font-family: "Raleway";
+  font-size: "bold";
+  color: black;
+  border-top: 1px solid #f2f2f2;
+  border-radius: 0px;
+  border-bottom: 1px solid #f2f2f2;
+  width: 220px;
+  margin: auto;
+  padding: 15px;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
-.hebergements aside
-{
-    background-color: #F2F2F2;
-    width: 20%;
-    border-radius: 10px;
-    padding: 5px;
-}
-footer
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-content: space-around;
-    background-color: #f2f2f2;
+.searchsubmitinput {
+  background-color: #0065fc;
+  color: white;
+  font-family: "Raleway";
+  font-weight: bold;
+  border: none;
+  border-radius: 0px 16px 16px 0px;
+  width: 120px;
+  margin: auto;
+  padding: 15px;
+  margin-left: 0px;
 }
 
-footer h1
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-content: space-around;
-    font-size: 0.8em;
-    font-weight: bolder;
-}
-footer ul a
-{
-    text-decoration: none; 
-    color: black;
-    font-size: 0.8em; 
+/*filtres */
+
+#searchfiltergroup {
+  display: flex;
+  justify-content: space-between;
+  width: 900px;
+  padding: 10px;
 }
 
-footer ul
-{
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+.searchfilter {
+  display: flex;
+  justify-content: space-around;
+  border: solid 2px #f2f2f2;
+  padding: 10px;
+}
+
+.searchfiltericon {
+  background-color: #deebff;
+  border-radius: 100%;
+  border: #deebff 1px solid;
+  margin: -12px;
+  padding: 12px;
+  color: #0065fc;
+}
+
+.fa-child {
+  padding-left: 2px;
+  padding-right: 2px;
+  size: 30x;
+}
+
+.searchfiltertitle {
+  margin-left: 20px;
+  margin-right: 10px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.searchfilter:hover {
+  background-color: #deebff;
+}
+
+/*info logement */
+
+.infologement {
+  display: flex;
+}
+
+.infoicone {
+  height: 20px;
+  width: 20px;
+  border: 1px solid #f2f2f2;
+  border-radius: 100%;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.fa-info {
+  margin-left: 8px;
+  font-size: 0.6em;
+  color: #0065fc;
+}
+
+/* Section */
+
+.bloc_hebergement {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.hebergements {
+  flex: 2;
+  margin-right: 30px;
+  padding: 20px;
+}
+
+.populaire {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.fa-chart-line {
+  margin: 20px 20px 0px 0px;
+}
+
+.activites {
+  background-color: white;
+  margin: 50px 0px 50px 0px;
+}
+
+/*Footer */
+
+footer {
+  margin-left: -50px;
+  margin-right: -50px;
+  background-color: #f2f2f2;
+  padding: 50px;
+}
+
+.text {
+  width: 900px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer ul {
+  list-style-type: none;
+  font-size: 0.8em;
+  padding: 0px;
+  width: 100%;
+  margin: 20px 10px 0px 0px;
+}
+
+.footer li {
+  margin-bottom: 10px;
 }

@@ -337,25 +337,9 @@ nav {
   justify-content: space-between;
 }
 
-.activitescontener {
+.activitesimage
+{
   display: flex;
-  justify-content: space-between;
-  max-width: 250px;
-  max-height: 400px;
-  border-radius: 20px 20px 20px 20px;
-  background-color: #0065fc;
-}
-
-.vignetteactivite {
-}
-
-.activitesimage {
-}
-
-.activitesinfo {
-}
-
-.activitestitle {
 }
 
 /*Footer */

@@ -4,6 +4,8 @@ body /* Eléments principaux de la page */ {
   font-family: "Raleway", Serif;
   color: black;
   margin: 25px 50px 0px 50px;
+  width: auto;
+  height: auto;
 }
 
 h1 {
@@ -27,6 +29,7 @@ p {
 
 a {
   text-decoration: none;
+  cursor: pointer;
   color: black;
 }
 
@@ -78,12 +81,18 @@ nav {
   margin-top: 20px;
 }
 
+header img
+{
+  object-fit: contain;
+}
+
 /*recherche*/
 
 #search {
   display: flex;
   height: 40px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
 }
 
 .searchicon {
@@ -108,6 +117,7 @@ nav {
   padding: 15px;
   margin-left: 0px;
   margin-right: 0px;
+  cursor: pointer;
 }
 
 .searchsubmitinput {
@@ -121,6 +131,7 @@ nav {
   margin: auto;
   padding: 15px;
   margin-left: 0px;
+  cursor: pointer;
 }
 
 /*filtres */
@@ -131,6 +142,7 @@ nav {
   align-items: center;
   padding: 10px;
   max-width: 100%;
+  cursor: pointer;
 }
 
 .searchfilter {
@@ -205,7 +217,7 @@ nav {
 
 .hebergements h2 {
   width: 100%;
-  margin: 0px 0px 20px 0px;
+  margin: 0px 0px 30px 0px;
   font-size: 1.3em;
 }
 
@@ -220,7 +232,6 @@ nav {
 }
 
 .hebergements p {
-  font-size: 0.7em;
   margin: 5px;
 }
 
@@ -239,21 +250,40 @@ nav {
 
 .vignettecontenu {
   margin: 5px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  height: 120px;
+  border-radius: 20px 20px 0px 0px;
+  overflow: hidden;
 }
 
-.hebergementimage {
+img
+{
   width: 100%;
-  max-height: 120px;
+  object-fit: cover;
   height: 100%;
-  border-radius: 20px 20px 0px 0px;
-  border-color: 1px solid #f2f2f2;
-  overflow: hidden;
 }
 
 .star {
   display: flex;
   margin: 10px 5px;
+  font-size: small;
 }
+.star [data-active="false"] {
+  color: #d9d9d9;
+}
+
+.star [data-active="true"] {
+  color: #0065fc;
+ }
+
+ .hebergementinfo
+ {
+  margin: 10px;
+ }
+ 
 
 /*populaire*/
 
@@ -263,83 +293,173 @@ nav {
 
 .populaire h2 {
   font-size: 1.3em;
-  margin: 0px 0px 20px 0px;
+  margin: 0px 0px 30px 0px;
 }
 
 .populaire {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-content: flex-start;
   padding: 40px 30px 0px 30px;
   flex: 1;
 }
 
-.fa-chart-line {
+.fa-chart-line 
+{
   margin: 5px 0px 20px 0px;
 }
 
-.populairecontener {
+.populairetittle
+{
   display: flex;
   justify-content: space-between;
-  align-content: space-between;
-  margin-bottom: 40px;
-  background-color: white;
-  padding: 5px;
-  border-radius: 20px 20px 20px 20px;
-  box-shadow: 1px 1px 10px grey;
 }
 
-.vignettecontenupop {
+.pop
+{
+  max-width: 100%;
+}
+
+.hebergementcontener.pop a 
+{
   display: flex;
-  margin: 0px;
-  max-height: 100%;
+  height: 140px;
+ 
 }
 
-.hebergementimagepop {
-  width: 40%;
+.hebergementcontener.pop a .vignettecontenu
+{
   border-radius: 20px 0px 0px 20px;
-  overflow: hidden;
-  margin-right: 20px;
+  height: 130px;
+  max-width: 40%;
+}
+
+.infopop
+{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
   height: 130px;
 }
 
-.hebergementinfopop {
+.populaire p 
+{
+  margin: 0px 5px;
+}
+
+/*activites*/
+
+.activites
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  max-height: 650px;
+  margin-top: 40px;
+}
+
+.titleact
+{
+  width: 100%;
+}
+
+.photoact
+{
+  width: 100%;
+  max-height: 450px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0px 50px 0px;
+}
+
+.col1
+{
+  height: 100%;
+  width: 22%;
+}
+.col2
+{
+  height: 100%;
+  width: 22%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.col3
+{
+  height: 100%;
+  width: 22%;
+}
+.col4
+{
+  height: 100%;
+  width: 22%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.populaire p {
-  margin: 0px 5px;
-}
-
-.star [data-active="false"] {
-  color: #d9d9d9;
-}
-
-.star [data-active="true"] {
-  color: #0065fc;
-}
-
-/*activites*/
-
-.activites h2 {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 50px;
+.vignetteactivites
+{
+  height: 100%;
+  border-radius: 20px;
   width: 100%;
+  overflow: hidden;
+  box-shadow: 1px 1px 10px grey;
 }
 
-.activites {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.activitestitle
+{
+  
+  height: 60px;
 }
 
 .activitesimage
 {
+  width:100% ;
+  height: 100%;
+  overflow: hidden;
+}
+
+.activites img
+{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.activites h4
+{
+  margin-left: 15px;
+}
+
+.act2
+{
+  height: 58%;
+}
+
+.act3
+{
+  height: 32%;
+}
+
+.act5
+{
+  height: 44%;
+}
+
+.act6
+{
+  height: 44%;
+}
+
+.vignetteactivites a
+{
   display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 /*Footer */

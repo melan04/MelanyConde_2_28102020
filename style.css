@@ -1,16 +1,21 @@
 /* Définition des polices personnalisées */
 
+@font-face {
+  font-family: "Raleway";
+  src: url("polices/Raleway/Raleway-VariableFont_wght.ttf") format(truetype);
+}
+
 body /* Eléments principaux de la page */ {
-  font-family: "Raleway", Serif;
+  font-family: "Raleway";
   color: black;
   margin: 25px 50px 0px 50px;
   width: auto;
   height: auto;
+  font-weight: bold;
 }
 
 h1 {
   font-size: 1.4em;
-  font-weight: bold;
 }
 
 h2 {
@@ -25,6 +30,7 @@ h3 {
 
 p {
   font-size: 0.8em;
+  font-weight: normal;
 }
 
 a {
@@ -40,6 +46,25 @@ a {
 .arrondis {
   border-radius: 20px;
   border-color: 1px solid #f2f2f2;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+.star {
+  display: flex;
+  margin: 10px 5px;
+  font-size: small;
+}
+.star [data-active="false"] {
+  color: #d9d9d9;
+}
+
+.star [data-active="true"] {
+  color: #0065fc;
 }
 
 /* Header */
@@ -72,6 +97,7 @@ a {
 }
 
 nav {
+  font-weight: normal;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -81,8 +107,7 @@ nav {
   margin-top: 20px;
 }
 
-header img
-{
+header img {
   object-fit: contain;
 }
 
@@ -97,7 +122,6 @@ header img
 
 .searchicon {
   border-radius: 16px 0px 0px 16px;
-
   margin: auto;
   padding: 15px;
   margin-right: 0px;
@@ -132,6 +156,10 @@ header img
   padding: 15px;
   margin-left: 0px;
   cursor: pointer;
+}
+
+input:focus {
+  border-color: red;
 }
 
 /*filtres */
@@ -169,7 +197,6 @@ header img
 .searchfiltertitle {
   margin: 0px 10px 0px 10px;
   font-weight: bold;
-  font-size: 0.9em;
 }
 
 .searchfilter:hover {
@@ -183,6 +210,7 @@ header img
 }
 
 .infoicone {
+  display: flex;
   height: 20px;
   width: 20px;
   border: 1px solid #f2f2f2;
@@ -191,7 +219,7 @@ header img
 }
 
 .fa-info {
-  margin-left: 0.8em;
+  margin: auto;
   font-size: 0.6em;
   color: #0065fc;
 }
@@ -200,13 +228,18 @@ header img
 
 /* Hebergements */
 
+h4 {
+  width: 100%;
+  margin: 5px;
+}
+
 .bloc_hebergement {
   display: flex;
   margin-top: 20px;
 }
 
 .hebergements {
-  padding: 40px 40px 40px 40px;
+  padding: 40px;
   margin-right: 40px;
   flex: 2.5;
   display: flex;
@@ -218,12 +251,6 @@ header img
 .hebergements h2 {
   width: 100%;
   margin: 0px 0px 30px 0px;
-  font-size: 1.3em;
-}
-
-.hebergements h4 {
-  width: 100%;
-  margin: 5px;
 }
 
 .hebergements h3 {
@@ -243,14 +270,14 @@ header img
   margin: 0px 0px 40px 0px;
   max-width: 30%;
   background-color: white;
-  border-radius: 20px 20px 20px 20px;
+  border-radius: 20px;
   border-color: 1px solid #f2f2f2;
   box-shadow: 1px 1px 10px grey;
 }
 
 .vignettecontenu {
   margin: 5px;
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
@@ -259,40 +286,18 @@ header img
   overflow: hidden;
 }
 
-img
-{
-  width: 100%;
-  object-fit: cover;
-  height: 100%;
-}
-
-.star {
-  display: flex;
-  margin: 10px 5px;
-  font-size: small;
-}
-.star [data-active="false"] {
-  color: #d9d9d9;
-}
-
-.star [data-active="true"] {
-  color: #0065fc;
- }
-
- .hebergementinfo
- {
+.hebergementinfo {
   margin: 10px;
- }
- 
+}
 
 /*populaire*/
 
-.populaire h4 {
-  margin: 5px;
+.fa-chart-line {
+  font-size: 1.3em;
+  margin: 0px 0px 30px 0px;
 }
 
 .populaire h2 {
-  font-size: 1.3em;
   margin: 0px 0px 30px 0px;
 }
 
@@ -305,53 +310,40 @@ img
   flex: 1;
 }
 
-.fa-chart-line 
-{
-  margin: 5px 0px 20px 0px;
-}
-
-.populairetittle
-{
+.populairetittle {
   display: flex;
   justify-content: space-between;
 }
 
-.pop
-{
+.pop {
   max-width: 100%;
 }
 
-.hebergementcontener.pop a 
-{
+.hebergementcontener.pop a {
   display: flex;
-  height: 140px;
- 
+  height: 130px;
 }
 
-.hebergementcontener.pop a .vignettecontenu
-{
+.hebergementcontener.pop a .vignettecontenu {
   border-radius: 20px 0px 0px 20px;
-  height: 130px;
+  max-height: 100%;
   max-width: 40%;
 }
 
-.infopop
-{
-  display:flex;
+.infopop {
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 130px;
+  max-height: 100%;
 }
 
-.populaire p 
-{
+.populaire p {
   margin: 0px 5px;
 }
 
 /*activites*/
 
-.activites
-{
+.activites {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -360,13 +352,11 @@ img
   margin-top: 40px;
 }
 
-.titleact
-{
+.titleact {
   width: 100%;
 }
 
-.photoact
-{
+.photoact {
   width: 100%;
   max-height: 450px;
   display: flex;
@@ -374,26 +364,22 @@ img
   margin: 10px 0px 50px 0px;
 }
 
-.col1
-{
+.col1 {
   height: 100%;
   width: 22%;
 }
-.col2
-{
+.col2 {
   height: 100%;
   width: 22%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.col3
-{
-  height: 100%;
+.col3 {
+  max-height: 100%;
   width: 22%;
 }
-.col4
-{
+.col4 {
   height: 100%;
   width: 22%;
   display: flex;
@@ -401,8 +387,7 @@ img
   justify-content: space-between;
 }
 
-.vignetteactivites
-{
+.vignetteactivites {
   height: 100%;
   border-radius: 20px;
   width: 100%;
@@ -410,63 +395,59 @@ img
   box-shadow: 1px 1px 10px grey;
 }
 
-.activitestitle
-{
-  
+.activitestitle {
   height: 60px;
 }
 
-.activitesimage
-{
-  width:100% ;
-  height: 100%;
-  overflow: hidden;
-}
-
-.activites img
-{
+.activitesimage {
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
 
-.activites h4
-{
+.activites img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.activites h4 {
   margin-left: 15px;
 }
 
-.act2
-{
+.act2 {
   height: 58%;
 }
 
-.act3
-{
+.act3 {
   height: 32%;
 }
 
-.act5
-{
+.act5 {
   height: 44%;
 }
 
-.act6
-{
+.act6 {
   height: 44%;
 }
 
-.vignetteactivites a
-{
+.vignetteactivites a {
   display: flex;
   flex-direction: column;
   height: 100%;
+}
+
+.activites h4 {
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
 }
 
 /*Footer */
 
 footer {
   background-color: #f2f2f2;
-  padding: 40px 0px 40px 0px;
+  padding: 40px 0px;
   margin: 0px -50px 0px -50px;
 }
 
@@ -479,6 +460,7 @@ footer {
   list-style-type: none;
   font-size: 0.9em;
   padding-right: 250px;
+  font-weight: normal;
 }
 
 footer li {

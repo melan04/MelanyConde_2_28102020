@@ -50,7 +50,6 @@ a {
 
 .arrondis {
   border-radius: 20px;
-  border: 1px solid #f2f2f2;
 }
 
 img {
@@ -270,6 +269,40 @@ header img {
   align-content: flex-start;
 }
 
+.hebergements .hebergementcontener
+{
+  height: 200px;
+}
+.hebergements .hebergementcontener a
+{
+  height: 100%;
+}
+
+.hebergements .hebergementcontener a .vignettecontener 
+{
+  height :60%;
+}
+
+.hebergements .hebergementcontener a .hebergementinfo
+{
+  height :40%;
+  margin: 0px 10px;
+}
+
+.hebergements .hebergementcontener a .hebergementinfo .hebergementtitle
+{
+  height :15%;
+}
+.hebergements .hebergementcontener a .hebergementinfo p
+{
+  height :10%;
+}
+
+.hebergements .hebergementcontener a .hebergementinfo .star
+{
+  height :10%;
+}
+
 .hebergementcontener {
   display: flex;
   flex-wrap: wrap;
@@ -486,6 +519,7 @@ footer li {
 }
 
 @media all and (max-width: 1280px) {
+  
   #header,
   .hebergements,
   .activites {
@@ -498,7 +532,7 @@ footer li {
 
   body {
     margin: auto; /*voir pour mettre sur le desktop également */
-    width: 375px; /*provisoire*/
+    width: auto; /*provisoire*/
   }
 
   .bloc_hebergement {
@@ -546,6 +580,7 @@ footer li {
 
   #search {
     width: 100%;
+    height: 50px;
   }
 
   .searchicon {
@@ -558,6 +593,8 @@ footer li {
 
   .searchsubmitinput {
     width: 20%;
+    height: 48px;
+    border-radius: 16px;
   }
 
   #searchfiltergroup {
@@ -634,6 +671,8 @@ footer li {
 
  {
   display :flex;
+  font-size:1.2em;
+  justify-content: center;
  }
 
 }

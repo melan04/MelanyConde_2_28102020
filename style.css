@@ -1,10 +1,5 @@
 /* Définition des polices personnalisées */
 
-@font-face {
-  font-family: "Raleway";
-  src: url("polices/Raleway/Raleway-VariableFont_wght.ttf") format(truetype);
-}
-
 body /* Eléments principaux de la page */ {
   font-family: "Raleway";
   color: black;

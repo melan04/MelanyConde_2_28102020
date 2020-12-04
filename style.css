@@ -1,7 +1,7 @@
 /* Définition des polices personnalisées */
 
 body /* Eléments principaux de la page */ {
-  font-family: "Raleway";
+  font-family: "Raleway", serif;
   color: black;
   margin-top: 20px;
   width: auto;
@@ -99,7 +99,7 @@ img {
 
 .menu li a:focus {
   border-top: 1px solid #0065fc;
-  padding-top: 30px;
+  padding-top: 25px;
   color: #0065fc;
 }
 

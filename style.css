@@ -156,7 +156,7 @@ header img {
 .searchinput {
   border: none;
   font-family: "Raleway";
-  font-size: "bold";
+  font-weight: bold;
   color: black;
   border-top: 1px solid #f2f2f2;
   border-radius: 0px;
@@ -181,7 +181,7 @@ header img {
   padding: 15px;
   margin-left: 0px;
   cursor: pointer;
-  border: 1px solid #0065fc;
+  border: 1px solid;
 }
 
 .searchicon .fa-map-marker-alt {
@@ -216,7 +216,7 @@ header img {
 
 .searchfiltericon {
   background-color: #deebff;
-  border: 1px #deebff solid;
+  border: 1px solid;
   border-radius: 100%;
   height: 3rem;
   width: 3rem;
@@ -313,7 +313,7 @@ header img {
   margin: 0px 0px 40px 0px;
   background-color: white;
   border-radius: 20px;
-  border-color: 1px solid #f2f2f2;
+  border: 1px solid #f2f2f2;
   box-shadow: 1px 1px 10px grey;
 }
 
@@ -502,7 +502,7 @@ footer li {
   width: 30%;
 }
 
-@media screen and (min-width: 750px) and (max-width: 1280px) /*tablettes*/ {
+@media screen and (min-width: 750px) and (max-width: 1210px) /*tablettes*/ {
   .bloc_hebergement {
     margin: 0px;
     flex-direction: column;
